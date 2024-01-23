@@ -1,12 +1,16 @@
-
+import { Routes, Route } from "react-router-dom";
 import './App.css';
+import CheckoutPage from './pages/checkoutPage/CheckoutPage';
+import HomePage from './pages/homePage/HomePage';
+import UserAccountPage from "./pages/userAccountPage/UserAccountPage";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <h1>Hello World</h1>
-    </div>
+  <Routes>
+    <Route path="/" element={<HomePage />} />
+    <Route path="/checkout" element={<CheckoutPage />} />
+    <Route path="/youruseraccount" element={<UserAccountPage />} />
+  </Routes>
   );
 }
 
