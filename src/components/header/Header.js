@@ -21,7 +21,9 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <div className="header-message"></div>
+        <div className="header-message">
+          <p>Welcome Back</p>
+        </div>
       </div>
     </header>
   );
