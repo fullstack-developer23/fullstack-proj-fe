@@ -8,14 +8,13 @@ import Header from "./components/header/Header";
 
 function App() {
   const [games, setGames] = useState([]);
-  const [fixed, setFixed] = useState(true);
+  const [cart, setCart] = useState([]);
   const fetchGames = async () => {
     const response = await fetch(
       `https://api.rawg.io/api/games?key=${process.env.REACT_APP_API_KEY}`
     );
 
     const data = await response.json();
-    console.log("data from api", data);
     const gamesData = data.results.map((game, index) => {
       return {
         gameImage: game.background_image,
@@ -24,12 +23,11 @@ function App() {
         gameRating: game.metacritic,
       };
     });
-    console.log(gamesData);
     setGames(gamesData);
   };
   useEffect(() => {
     fetchGames();
-  }, [fixed]);
+  }, []);
 
   return (
     <div className="app">
