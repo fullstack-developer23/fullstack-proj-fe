@@ -9,11 +9,7 @@ const GameCard = ({ game }) => {
   return (
     <div className="GameCard" onClick={(e) => handleClick(e, game)}>
       <div className="gameCard-img-container">
-        <img
-          className="gameCard-img"
-          src={game.gameImage}
-          alt="a picture of a game"
-        />
+        <img className="gameCard-img" src={game.gameImage} alt="a videogame" />
       </div>
       <div className="gameDataContainer">
         <p>{game.gameName}</p>
