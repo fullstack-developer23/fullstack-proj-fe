@@ -1,14 +1,15 @@
 import React from "react";
 import "./GameContainer.css";
+import GameCard from "../gameCard/GameCard";
 
 const GameContainer = ({ games }) => {
+  console.log(games);
+  // const games1 = games.splice(10);
   return (
     <div className="game-container-wrapper">
-      <div className="game-container-inner">
-        {games.map((game, index) => (
-          <GameCard game={game} />
-        ))}
-      </div>
+      {games.map((game, index) => (
+        <GameCard game={game} />
+      ))}
     </div>
   );
 };
