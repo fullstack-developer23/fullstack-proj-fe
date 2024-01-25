@@ -8,7 +8,7 @@ import Header from "./components/header/Header";
 
 function App() {
   const [games, setGames] = useState([]);
-  const [cart, setCart] = useState([]);
+
   const fetchGames = async () => {
     const response = await fetch(
       `https://api.rawg.io/api/games?key=${process.env.REACT_APP_API_KEY}`
