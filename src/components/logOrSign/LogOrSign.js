@@ -1,12 +1,15 @@
 import React from "react";
-import { SignUp } from "../signUp/SignUp";
+import SignUp from "../signUp/SignUp";
+import "./LogOrSign.css";
 
-function LogOrSign() {
-  <div className="logorsign-wrapper">
-    <div className="logorsign-inner-container">
-      <SignUp />
+const LogOrSign = () => {
+  return (
+    <div className="logorsign-wrapper">
+      <div className="logorsign-inner-container">
+        <SignUp />
+      </div>
     </div>
-  </div>;
-}
+  );
+};
 
 export default LogOrSign;

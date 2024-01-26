@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import LogOrSign from "../../components/logOrSign/LogOrSign";
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <div>
+      <div className="signupBox">
+        <LogOrSign />
+      </div>
+    </div>
+  );
+};
 
-export default HomePage
+export default HomePage;
