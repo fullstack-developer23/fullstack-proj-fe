@@ -22,10 +22,12 @@ function App() {
         gameId: game.id,
         gameName: game.name,
         gameRating: game.metacritic,
+        price: 50000,
       };
     });
     setGames(gamesData);
   };
+
   useEffect(() => {
     fetchGames();
   }, []);
@@ -39,7 +41,7 @@ function App() {
           element={<HomePage games={games} cart={cart} setCart={setCart} />}
         />
 
-        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/checkout" element={<CheckoutPage cart={cart} />} />
         <Route path="/youruseraccount" element={<UserAccountPage />} />
       </Routes>
     </div>
