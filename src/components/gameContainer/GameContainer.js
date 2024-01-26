@@ -8,7 +8,7 @@ const GameContainer = ({ games, cart, setCart }) => {
   return (
     <div className="game-container-wrapper">
       {games.map((game, index) => (
-        <GameCard game={game} cart={cart} setCart={setCart} />
+        <GameCard game={game} cart={cart} setCart={setCart} key={game.gameId} />
       ))}
     </div>
   );

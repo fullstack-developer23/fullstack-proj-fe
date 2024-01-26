@@ -1,9 +1,10 @@
-import React from 'react'
-
-const CheckoutPage = () => {
+import CheckoutCart from "../../components/checkoutCart/CheckoutCart";
+const CheckoutPage = ({ cart }) => {
   return (
-    <div>CheckoutPage</div>
-  )
-}
+    <div>
+      <CheckoutCart cart={cart} />
+    </div>
+  );
+};
 
-export default CheckoutPage
+export default CheckoutPage;
