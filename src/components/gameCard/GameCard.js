@@ -1,9 +1,10 @@
 import React from "react";
 import "./GameCard.css";
 
-const GameCard = ({ game }) => {
+const GameCard = ({ cart, setCart, game }) => {
   const handleClick = (e, game) => {
-    console.log("Testing GameCard", game.id);
+    setCart([...cart, game]);
+    console.log(cart);
   };
 
   return (
