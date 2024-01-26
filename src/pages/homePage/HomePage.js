@@ -1,4 +1,3 @@
-import React from "react";
 import "./HomePage.css";
 import GameContainer from "../../components/gameContainer/GameContainer";
 
