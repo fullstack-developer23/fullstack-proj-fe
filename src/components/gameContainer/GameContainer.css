@@ -1,0 +1,19 @@
+.game-container-wrapper {
+  height: 80vh;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game-container-inner {
+  border: 1px solid red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
