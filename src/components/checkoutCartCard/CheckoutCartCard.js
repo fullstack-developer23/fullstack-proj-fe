@@ -1,6 +1,5 @@
 import React from "react";
 import "./CheckoutCartCard.css";
-import GameCard from "../gameCard/GameCard";
 
 const CheckoutCartCard = ({ cart, setCart, game }) => {
   const handleClick = (e, game) => {
@@ -9,7 +8,11 @@ const CheckoutCartCard = ({ cart, setCart, game }) => {
   };
   return (
     <div className="CheckoutCartCard">
-      <img className="checkout-card-img" src={game.gameImage}></img>
+      <img
+        className="checkout-card-img"
+        src={game.gameImage}
+        alt="a videogame"
+      ></img>
       <p className="game-title">{game.gameName}</p>
       <p>Price: {game.price}</p>
       <div onClick={(e) => handleClick(e, game)}>
