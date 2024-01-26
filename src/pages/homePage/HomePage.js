@@ -1,7 +1,3 @@
-import React from "react";
-
-import LogOrSign from "../../components/logOrSign/LogOrSign";
-
 import "./HomePage.css";
 import GameContainer from "../../components/gameContainer/GameContainer";
 
