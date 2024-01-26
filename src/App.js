@@ -9,6 +9,7 @@ import Header from "./components/header/Header";
 function App() {
   const [games, setGames] = useState([]);
   const [cart, setCart] = useState([]);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const fetchGames = async () => {
     const response = await fetch(
@@ -36,7 +37,15 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<HomePage games={games} cart={cart} setCart={setCart} />}
+          element={
+            <HomePage
+              games={games}
+              cart={cart}
+              setCart={setCart}
+              setLoggedIn={setLoggedIn}
+              loggedIn={loggedIn}
+            />
+          }
         />
 
         <Route path="/checkout" element={<CheckoutPage />} />
