@@ -1,7 +1,5 @@
-import React from "react";
-import CheckoutCartCard from "../../components/checkoutCartCard/CheckoutCartCard";
 import CheckoutCart from "../../components/checkoutCart/CheckoutCart";
-const CheckoutPage = ({ cart, setCart, game }) => {
+const CheckoutPage = ({ cart }) => {
   return (
     <div>
       <CheckoutCart cart={cart} />
