@@ -15,8 +15,9 @@ const CheckoutCartCard = ({ cart, setCart, game }) => {
       ></img>
       <p className="game-title">{game.gameName}</p>
       <p>Price: {game.price}</p>
+
       <div onClick={(e) => handleClick(e, game)}>
-        <button className="remove-btn" type="button" onClick={handleClick}>
+        <button className="remove-btn" type="button">
           Remove From Cart
         </button>
       </div>
@@ -25,4 +26,3 @@ const CheckoutCartCard = ({ cart, setCart, game }) => {
 };
 
 export default CheckoutCartCard;
-//hello

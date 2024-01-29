@@ -1,8 +1,8 @@
 import CheckoutCart from "../../components/checkoutCart/CheckoutCart";
-const CheckoutPage = ({ cart }) => {
+const CheckoutPage = ({ cart, quantity }) => {
   return (
     <div>
-      <CheckoutCart cart={cart} />
+      <CheckoutCart cart={cart} quantity={quantity} />
     </div>
   );
 };
