@@ -1,8 +1,16 @@
 import React from "react";
-import "./UserDetails.css";
+import DeleteUser from "../deleteUser/DeleteUser";
 
-const UserDetails = ({}) => {
-  return <p>UserDetails</p>;
+const UserDetails = ({ username, setLoggedIn, setIsDeleted }) => {
+  return (
+    <div>
+      <DeleteUser
+        username={username}
+        setLoggedIn={setLoggedIn}
+        setIsDeleted={setIsDeleted}
+      />
+    </div>
+  );
 };
 
 export default UserDetails;

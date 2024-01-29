@@ -49,7 +49,15 @@ function App() {
         />
 
         <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/youruseraccount" element={<UserAccountPage />} />
+        <Route
+          path="/youruseraccount"
+          element={
+            <UserAccountPage
+              username={loggedIn.username}
+              setLoggedIn={setLoggedIn}
+            />
+          }
+        />
       </Routes>
     </div>
   );
