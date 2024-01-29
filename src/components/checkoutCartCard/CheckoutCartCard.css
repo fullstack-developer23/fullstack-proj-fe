@@ -1,0 +1,27 @@
+.CheckoutCartCard {
+  border: solid 3px rgb(0, 0, 0);
+  width: 30%;
+  margin: 15px;
+  display: flex;
+  font-weight: lighter;
+  font-size: large;
+}
+.remove-btn {
+  color: rgb(241, 243, 199);
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  border: 2px red solid;
+  margin-left: 20px;
+}
+
+.checkout-card-img {
+  height: 40%;
+  width: 40%;
+  display: flex;
+  border: solid darkgrey 6px;
+}
+
+.game-title {
+  font-weight: bold;
+}

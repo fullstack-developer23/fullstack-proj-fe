@@ -1,5 +1,6 @@
 .logorsign-wrapper {
-  height: 100px;
-  width: 100px;
-  border: 2px solid blue;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
