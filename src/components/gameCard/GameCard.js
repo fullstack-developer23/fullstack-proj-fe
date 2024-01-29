@@ -2,15 +2,25 @@ import React from "react";
 import "./GameCard.css";
 
 const GameCard = ({ cart, setCart, game }) => {
-  const handleClick = (e, game) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    if (cart.length === 5) {
+      return;
+    }
+
+    for (let i = 0; i < cart.length; i++) {
+      if (cart[i].gameName === game.gameName) {
+        return;
+      }
+    }
     setCart([...cart, game]);
-    console.log(cart);
   };
 
   return (
     <div className="GameCard" onClick={(e) => handleClick(e, game)}>
       <div className="gameCard-img-container">
-        <img className="gameCard-img" src={game.gameImage} alt="a videogame" />
+        <img className="gameCard-img" src={game.gameImage} alt="a video-game" />
       </div>
       <div className="gameDataContainer">
         <p>{game.gameName}</p>
