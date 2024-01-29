@@ -4,6 +4,11 @@ import "./GameCard.css";
 const GameCard = ({ cart, setCart, game }) => {
   const handleClick = (e) => {
     e.preventDefault();
+
+    if (cart.length === 5) {
+      return;
+    }
+
     for (let i = 0; i < cart.length; i++) {
       if (cart[i].gameName === game.gameName) {
         return;
