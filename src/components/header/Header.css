@@ -1,6 +1,11 @@
-/* .header-inner-container */
-
-
-
-
-
+header.header-wrapper {
+  background: blueviolet;
+  width: 100%;
+}
+/* 
+.header-nav ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+} */
