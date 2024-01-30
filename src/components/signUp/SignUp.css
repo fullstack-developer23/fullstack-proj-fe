@@ -1,11 +1,13 @@
 .form-box {
-  background-color: blueviolet;
+  background-color: #24333c;
   width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .signup-container {
@@ -22,15 +24,39 @@
 }
 
 .form-box form input {
-  padding: 10px;
+  padding: 15px;
   margin: 5px;
-}
-
-.form-box form > button {
-  padding: 10px;
-  margin: 5px;
+  background: none;
+  border: 1px solid white;
 }
 
 h3.signup-title {
+  background: #0063db;
+  margin: 0px;
+  padding: 15px;
+  color: white;
   text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.form-box form > button {
+  padding: 15px;
+  margin: 5px;
+  background: #0063db;
+  border: none;
+  width: 150px;
+  font-size: medium;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+input.signup-input {
+  color: white;
+}
+
+::placeholder {
+  color: white;
 }

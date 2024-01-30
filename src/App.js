@@ -10,6 +10,7 @@ function App() {
   const [games, setGames] = useState([]);
   const [cart, setCart] = useState([]);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [quantity, setQuantity] = useState(0);
 
   const fetchGames = async () => {
     const response = await fetch(
@@ -35,7 +36,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
         <Route
           path="/"
@@ -46,11 +47,14 @@ function App() {
               setCart={setCart}
               setLoggedIn={setLoggedIn}
               loggedIn={loggedIn}
+              setQuantity={setQuantity}
             />
           }
         />
-
-        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route
+          path="/checkout"
+          element={<CheckoutPage cart={cart} quantity={quantity} />}
+        />
         <Route
           path="/youruseraccount"
           element={
