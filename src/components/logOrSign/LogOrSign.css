@@ -3,4 +3,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: url("gaming-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
