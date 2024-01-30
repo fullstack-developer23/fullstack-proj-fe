@@ -9,6 +9,8 @@ const HomePage = ({
   setLoggedIn,
   loggedIn,
   setQuantity,
+  totalPrice,
+  setTotalPrice,
 }) => {
   return (
     <div className="homePageWrapper">
@@ -20,6 +22,8 @@ const HomePage = ({
           cart={cart}
           setCart={setCart}
           setQuantity={setQuantity}
+          totalPrice={totalPrice}
+          setTotalPrice={setTotalPrice}
         />
       )}
     </div>

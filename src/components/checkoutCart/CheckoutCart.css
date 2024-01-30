@@ -1,7 +1,18 @@
 .checkoutWrapper {
-  border: 9px green solid;
+  /* border: 9px green solid; */
 }
 
-.COinnerContainer {
-  border: solid orange 6px;
+.co-innerContainer {
+  color: rgb(32, 32, 33);
+}
+
+.message {
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 30%;
+  height: 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  /* margin-left: 200px; */
+  margin-bottom: 20px;
 }

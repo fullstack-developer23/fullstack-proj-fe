@@ -1,0 +1,18 @@
+.checkout-page {
+  background-color: rgb(249, 249, 249);
+  color: rgb(0, 0, 0);
+}
+
+.payButton {
+  width: 300px;
+  height: 60px;
+  margin: 15px;
+  align-items: center;
+  background-color: rgb(199, 103, 95);
+  color: rgb(241, 234, 226);
+}
+
+.price-added {
+  align-items: center;
+  justify-content: center;
+}

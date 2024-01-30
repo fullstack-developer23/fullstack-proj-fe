@@ -14,11 +14,15 @@ const CheckoutCartCard = ({ cart, setCart, game }) => {
         alt="a videogame"
       ></img>
       <p className="game-title">{game.gameName}</p>
-      <p>Price: {game.price}</p>
+      <p className="price">Price: {game.price}</p>
 
-      <div onClick={(e) => handleClick(e, game)}>
-        <button className="remove-btn" type="button">
-          Remove From Cart
+      <div>
+        <button
+          onClick={(e) => handleClick(e, game)}
+          className="remove-btn"
+          type="button"
+        >
+          Remove
         </button>
       </div>
     </div>

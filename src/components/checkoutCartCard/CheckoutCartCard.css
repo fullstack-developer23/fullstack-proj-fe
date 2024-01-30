@@ -1,27 +1,36 @@
 .CheckoutCartCard {
   border: solid 3px rgb(0, 0, 0);
-  width: 30%;
+  width: 80%;
+  height: 120px;
   margin: 15px;
+  align-items: start;
   display: flex;
   font-weight: lighter;
-  font-size: large;
-}
-.remove-btn {
-  color: rgb(241, 243, 199);
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  border: 2px red solid;
-  margin-left: 20px;
+  font-size: small;
 }
 
 .checkout-card-img {
-  height: 40%;
-  width: 40%;
+  height: 90%;
+  width: 50%;
   display: flex;
   border: solid darkgrey 6px;
 }
 
 .game-title {
   font-weight: bold;
+  margin: 20px;
+}
+
+.price {
+  margin: 20px;
+  margin-right: 50px;
+}
+
+.remove-btn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(118, 11, 11);
+  height: 50%;
+  width: 140%;
+  margin-left: -20px;
+  margin-top: 50px;
 }
