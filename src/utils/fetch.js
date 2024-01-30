@@ -58,3 +58,24 @@ export const deleteUserFetch = async (username) => {
 
   return data;
 };
+
+export const updateEmailFetch = async (username, email) => {
+  const response = await fetch(
+    `${process.env.REACT_APP_BASE_URL}/users/updateUser`,
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        email: email,
+      }),
+    }
+  );
+
+  const data = await response.json();
+  console.log(data);
+
+  return data;
+};
