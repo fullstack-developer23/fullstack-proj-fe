@@ -5,6 +5,7 @@ import CheckoutPage from "./pages/checkoutPage/CheckoutPage";
 import HomePage from "./pages/homePage/HomePage";
 import UserAccountPage from "./pages/userAccountPage/UserAccountPage";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -66,6 +67,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 }
