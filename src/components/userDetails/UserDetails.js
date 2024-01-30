@@ -1,7 +1,8 @@
 import React from "react";
 import DeleteUser from "../deleteUser/DeleteUser";
+import UpdateUser from "../updateUser/UpdateUser";
 
-const UserDetails = ({ username, setLoggedIn, setIsDeleted }) => {
+const UserDetails = ({ username, setLoggedIn, setIsDeleted, loggedIn }) => {
   return (
     <div>
       <DeleteUser
@@ -9,6 +10,8 @@ const UserDetails = ({ username, setLoggedIn, setIsDeleted }) => {
         setLoggedIn={setLoggedIn}
         setIsDeleted={setIsDeleted}
       />
+
+      <UpdateUser setLoggedIn={setLoggedIn} loggedIn={loggedIn} />
     </div>
   );
 };

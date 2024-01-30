@@ -52,7 +52,6 @@ function App() {
             />
           }
         />
-
         <Route
           path="/checkout"
           element={<CheckoutPage cart={cart} quantity={quantity} />}
@@ -63,6 +62,7 @@ function App() {
             <UserAccountPage
               username={loggedIn.username}
               setLoggedIn={setLoggedIn}
+              loggedIn={loggedIn}
             />
           }
         />

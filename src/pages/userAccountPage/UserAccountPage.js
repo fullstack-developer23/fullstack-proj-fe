@@ -3,7 +3,7 @@ import UserOrders from "../../components/userOrders/UserOrders";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const UserAccountPage = ({ username, setLoggedIn }) => {
+const UserAccountPage = ({ username, setLoggedIn, loggedIn }) => {
   const [isDeleted, setIsDeleted] = useState(false);
   const navigate = useNavigate();
   if (isDeleted) {
@@ -15,6 +15,7 @@ const UserAccountPage = ({ username, setLoggedIn }) => {
         username={username}
         setLoggedIn={setLoggedIn}
         setIsDeleted={setIsDeleted}
+        loggedIn={loggedIn}
       />
       <UserOrders />
     </div>
