@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
+import logo from "./logo.png";
 
 const Header = () => {
   return (
     <header className="header-wrapper">
       <div className="header-inner-container">
-        <div className="logo"></div>
+        <div className="logo">
+          <img src={logo} width="150px" alt="Website-Logo" />
+        </div>
         <div className="header-nav">
           <nav>
             <ul>
