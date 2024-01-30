@@ -50,7 +50,6 @@ function App() {
           }
         />
 
-
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route
           path="/youruseraccount"
@@ -58,6 +57,7 @@ function App() {
             <UserAccountPage
               username={loggedIn.username}
               setLoggedIn={setLoggedIn}
+              loggedIn={loggedIn}
             />
           }
         />
