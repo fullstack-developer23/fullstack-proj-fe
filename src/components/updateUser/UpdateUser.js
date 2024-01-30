@@ -4,7 +4,6 @@ import { updateEmailFetch } from "../../utils/fetch";
 const UpdateUser = ({ setLoggedIn, loggedIn }) => {
   console.log("hello from userupdate", loggedIn);
   const [newEmail, setNewEmail] = useState("");
-  const [isUpdated, setIsUpdated] = useState("");
 
   const handleUpdateClick = async (e) => {
     e.preventDefault();
@@ -15,7 +14,6 @@ const UpdateUser = ({ setLoggedIn, loggedIn }) => {
 
       if (result) {
         setLoggedIn({ ...loggedIn, email: result.user.email });
-        setIsUpdated(true);
       }
     } catch (error) {
       console.error("Error updating email:", error);
