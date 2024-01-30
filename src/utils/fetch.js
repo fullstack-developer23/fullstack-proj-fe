@@ -18,17 +18,40 @@ export const signUpFetch = async (username, email, password) => {
 };
 
 export const loginFetch = async (username, password) => {
-  const response = await fetch("http://localhost:5001/users/login", {
-    method: "POST",
-    mode: "cors",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      username: username,
-      password: password,
-    }),
-  });
+  const response = await fetch(
+    `${process.env.REACT_APP_BASE_URL}/users/login`,
+    {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+      }),
+    }
+  );
+
+  const data = await response.json();
+  console.log(data);
+
+  return data;
+};
+
+export const deleteUserFetch = async (username) => {
+  const response = await fetch(
+    `${process.env.REACT_APP_BASE_URL}/users/delete`,
+    {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+      }),
+    }
+  );
 
   const data = await response.json();
   console.log(data);

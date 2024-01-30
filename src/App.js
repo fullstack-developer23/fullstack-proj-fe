@@ -52,11 +52,20 @@ function App() {
           }
         />
 
+
         <Route
           path="/checkout"
           element={<CheckoutPage cart={cart} quantity={quantity} />}
         />
-        <Route path="/youruseraccount" element={<UserAccountPage />} />
+        <Route
+          path="/youruseraccount"
+          element={
+            <UserAccountPage
+              username={loggedIn.username}
+              setLoggedIn={setLoggedIn}
+            />
+          }
+        />
       </Routes>
     </div>
   );
