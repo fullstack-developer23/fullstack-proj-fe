@@ -1,7 +1,14 @@
 import React from "react";
 import "./GameCard.css";
 
-const GameCard = ({ cart, setCart, game, quantity, setQuantity }) => {
+const GameCard = ({
+  cart,
+  setCart,
+  game,
+  setQuantity,
+  setTotalPrice,
+  totalPrice,
+}) => {
   const handleClick = (e) => {
     e.preventDefault();
 
@@ -16,6 +23,7 @@ const GameCard = ({ cart, setCart, game, quantity, setQuantity }) => {
     }
     setCart([...cart, game]);
     setQuantity(cart.length);
+    setTotalPrice(totalPrice + game.price);
   };
 
   return (

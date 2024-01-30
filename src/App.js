@@ -12,6 +12,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [loggedIn, setLoggedIn] = useState(false);
   const [quantity, setQuantity] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const fetchGames = async () => {
     const response = await fetch(
@@ -25,7 +26,7 @@ function App() {
         gameId: game.id,
         gameName: game.name,
         gameRating: game.metacritic,
-        price: 50000,
+        price: 49.99,
       };
     });
     setGames(gamesData);
@@ -49,12 +50,21 @@ function App() {
               setLoggedIn={setLoggedIn}
               loggedIn={loggedIn}
               setQuantity={setQuantity}
+              totalPrice={totalPrice}
+              setTotalPrice={setTotalPrice}
             />
           }
         />
         <Route
           path="/checkout"
-          element={<CheckoutPage cart={cart} quantity={quantity} />}
+          element={
+            <CheckoutPage
+              cart={cart}
+              quantity={quantity}
+              totalPrice={totalPrice}
+              setTotalPrice={setTotalPrice}
+            />
+          }
         />
         <Route
           path="/youruseraccount"
