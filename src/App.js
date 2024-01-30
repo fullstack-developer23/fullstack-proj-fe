@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
         <Route
           path="/"
@@ -51,7 +51,6 @@ function App() {
             />
           }
         />
-
 
         <Route
           path="/checkout"
