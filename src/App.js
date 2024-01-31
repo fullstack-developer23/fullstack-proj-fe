@@ -75,6 +75,7 @@ function App() {
             <UserAccountPage
               username={loggedIn.username}
               setLoggedIn={setLoggedIn}
+              loggedIn={loggedIn}
             />
           }
         />
