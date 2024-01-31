@@ -17,7 +17,7 @@ const UserAccountPage = ({ username, setLoggedIn, loggedIn }) => {
         setIsDeleted={setIsDeleted}
         loggedIn={loggedIn}
       />
-      <UserOrders />
+      <UserOrders loggedIn={loggedIn} />
     </div>
   );
 };
