@@ -79,3 +79,20 @@ export const updateEmailFetch = async (username, email) => {
 
   return data;
 };
+
+export const addOrder = async (totalPrice, UserId) => {
+  const response = await fetch(`${process.env.REACT_APP_BASE_URL}/orders`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      totalPrice: totalPrice,
+      UserId: UserId,
+    }),
+  });
+  const data = await response.json();
+  console.log(data);
+
+  return data;
+};

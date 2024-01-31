@@ -5,6 +5,7 @@ import CheckoutPage from "./pages/checkoutPage/CheckoutPage";
 import HomePage from "./pages/homePage/HomePage";
 import UserAccountPage from "./pages/userAccountPage/UserAccountPage";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -12,6 +13,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [quantity, setQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [hasOrdered, setHasOrdered] = useState(false);
 
   const fetchGames = async () => {
     const response = await fetch(
@@ -37,7 +39,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header loggedIn={loggedIn} />
       <Routes>
         <Route
           path="/"
@@ -62,6 +64,8 @@ function App() {
               quantity={quantity}
               totalPrice={totalPrice}
               setTotalPrice={setTotalPrice}
+              hasOrdered={hasOrdered}
+              setHasOrdered={setHasOrdered}
             />
           }
         />
@@ -75,6 +79,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </div>
   );
 }
