@@ -5,7 +5,6 @@ import CheckoutPage from "./pages/checkoutPage/CheckoutPage";
 import HomePage from "./pages/homePage/HomePage";
 import UserAccountPage from "./pages/userAccountPage/UserAccountPage";
 import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
 
 function App() {
   const [games, setGames] = useState([]);
@@ -38,7 +37,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+      <Header />
       <Routes>
         <Route
           path="/"
@@ -72,12 +71,10 @@ function App() {
             <UserAccountPage
               username={loggedIn.username}
               setLoggedIn={setLoggedIn}
-              loggedIn={loggedIn}
             />
           }
         />
       </Routes>
-      <Footer />
     </div>
   );
 }
