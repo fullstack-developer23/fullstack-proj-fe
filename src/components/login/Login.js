@@ -4,12 +4,12 @@ import { useState } from "react";
 import { loginFetch } from "../../utils/fetch";
 
 const Login = ({ setLoggedIn }) => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await loginFetch(email, password);
+    const data = await loginFetch(username, password);
     await setLoggedIn(data.user);
   };
 
@@ -22,9 +22,9 @@ const Login = ({ setLoggedIn }) => {
           <form onSubmit={(e) => handleSubmit(e)}>
             <input
               className="login-input"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <input
               className="login-input"
