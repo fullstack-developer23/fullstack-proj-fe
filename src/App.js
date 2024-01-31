@@ -12,6 +12,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [quantity, setQuantity] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [hasOrdered, setHasOrdered] = useState(false);
 
   const fetchGames = async () => {
     const response = await fetch(
@@ -62,6 +63,8 @@ function App() {
               quantity={quantity}
               totalPrice={totalPrice}
               setTotalPrice={setTotalPrice}
+              hasOrdered={hasOrdered}
+              setHasOrdered={setHasOrdered}
             />
           }
         />
