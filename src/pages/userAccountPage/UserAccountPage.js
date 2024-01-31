@@ -10,7 +10,7 @@ const UserAccountPage = ({ username, setLoggedIn, loggedIn }) => {
     navigate("/");
   }
   return (
-    <div class="userAccountWrapper">
+    <div class="userAccountWrapper page-sizing">
       <UserDetails
         username={username}
         setLoggedIn={setLoggedIn}

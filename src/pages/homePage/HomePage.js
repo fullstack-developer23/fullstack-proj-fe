@@ -13,7 +13,7 @@ const HomePage = ({
   setTotalPrice,
 }) => {
   return (
-    <div className="homePageWrapper">
+    <div className="homePageWrapper page-sizing">
       {!loggedIn ? (
         <LogOrSign setLoggedIn={setLoggedIn} />
       ) : (
