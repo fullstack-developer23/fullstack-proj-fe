@@ -92,7 +92,7 @@ export const addOrder = async (totalPrice, UserId) => {
     }),
   });
   const data = await response.json();
-  console.log(data);
+  console.log("order data", data);
 
   return data;
 };

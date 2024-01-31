@@ -60,12 +60,15 @@ function App() {
           path="/checkout"
           element={
             <CheckoutPage
+              setCart={setCart}
               cart={cart}
               quantity={quantity}
               totalPrice={totalPrice}
               setTotalPrice={setTotalPrice}
               hasOrdered={hasOrdered}
               setHasOrdered={setHasOrdered}
+              setLoggedIn={setLoggedIn}
+              loggedIn={loggedIn}
             />
           }
         />
