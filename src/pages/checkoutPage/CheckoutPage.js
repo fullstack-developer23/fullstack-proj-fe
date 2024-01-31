@@ -21,7 +21,7 @@ const CheckoutPage = ({
     setHasOrdered(!hasOrdered);
     setCart([]);
     const temp = loggedIn;
-    temp.orders.push(data.order);
+    temp.Orders.push(data.order);
     setLoggedIn(temp);
     // setTimeout(setHasOrdered(true), 2000);
     // setLoggedIn(loggedIn);
