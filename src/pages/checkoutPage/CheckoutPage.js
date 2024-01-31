@@ -10,7 +10,7 @@ const CheckoutPage = ({
   setHasOrdered,
 }) => {
   return (
-    <div className="checkout-page">
+    <div className="checkout-page page-sizing">
       <div>
         <CheckoutCart cart={cart} quantity={quantity} />
       </div>
