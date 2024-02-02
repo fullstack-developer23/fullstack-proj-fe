@@ -3,7 +3,6 @@ import "./CheckoutCartCard.css";
 
 const CheckoutCartCard = ({ cart, setCart, game }) => {
   const handleClick = (e, cart) => {
-    const temp = cart;
     const temp2 = cart.filter((el) => parseInt(e.target.value) !== el.gameId);
     setCart([...temp2]);
   };
