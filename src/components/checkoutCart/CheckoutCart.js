@@ -10,7 +10,7 @@ const CheckoutCart = ({ cart, setCart, quantity, games }) => {
           {cart.length === 5 ? (
             <p>You have a full cart</p>
           ) : (
-            <p>{cart.length} GAMES ADDED | You still have space for more</p>
+            <p>GAMES ADDED: {cart.length} | You still have space for more</p>
           )}
         </div>
         <div>

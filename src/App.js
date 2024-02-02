@@ -67,6 +67,8 @@ function App() {
               setTotalPrice={setTotalPrice}
               hasOrdered={hasOrdered}
               setHasOrdered={setHasOrdered}
+              setLoggedIn={setLoggedIn}
+              loggedIn={loggedIn}
             />
           }
         />
@@ -76,6 +78,7 @@ function App() {
             <UserAccountPage
               username={loggedIn.username}
               setLoggedIn={setLoggedIn}
+              loggedIn={loggedIn}
             />
           }
         />

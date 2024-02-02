@@ -12,7 +12,7 @@
   height: 90%;
   width: 50%;
   display: flex;
-  border: solid darkgrey 6px;
+  border: solid rgb(213, 213, 213) 6px;
 }
 
 .game-title {
