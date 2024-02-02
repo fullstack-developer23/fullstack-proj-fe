@@ -2,7 +2,7 @@ import React from "react";
 import CheckoutCartCard from "../checkoutCartCard/CheckoutCartCard";
 import "./CheckoutCart.css";
 
-const CheckoutCart = ({ cart, quantity, games, i }) => {
+const CheckoutCart = ({ cart, setCart, quantity, games }) => {
   return (
     <div className="checkoutWrapper">
       <div className="co-innerContainer">
@@ -15,7 +15,12 @@ const CheckoutCart = ({ cart, quantity, games, i }) => {
         </div>
         <div>
           {cart.map((game, index) => (
-            <CheckoutCartCard game={game} key={game.gameId} />
+            <CheckoutCartCard
+              game={game}
+              key={game.gameId}
+              cart={cart}
+              setCart={setCart}
+            />
           ))}
         </div>
       </div>

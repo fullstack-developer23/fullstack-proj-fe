@@ -10,13 +10,11 @@ const SignUp = () => {
 
   const changeHandler = (e, setter, state) => {
     setter(e.target.value);
-    console.log(state);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     await signUpFetch(username, email, password);
-    console.log("signed up successfully");
   };
 
   return (

@@ -6,11 +6,9 @@ const CheckoutPage = ({
   cart,
   quantity,
   games,
-  e,
-  setTotalPrice,
   totalPrice,
-  hasOrdered,
   setHasOrdered,
+  hasOrdered,
   setLoggedIn,
   loggedIn,
 }) => {
@@ -23,14 +21,17 @@ const CheckoutPage = ({
     const temp = loggedIn;
     temp.Orders.push(data.order);
     setLoggedIn(temp);
-    // setTimeout(setHasOrdered(true), 2000);
-    // setLoggedIn(loggedIn);
-    // setTotalPrice(!totalPrice);
   };
   return (
     <div className="checkout-page page-sizing">
       <div>
-        <CheckoutCart cart={cart} quantity={quantity} />
+        <CheckoutCart
+          cart={cart}
+          setCart={setCart}
+          quantity={quantity}
+          hasOrdered={hasOrdered}
+          setHasOrdered={setHasOrdered}
+        />
       </div>
       <div>
         <p className="price-added">Total Price: {totalPrice.toFixed(2)}</p>
