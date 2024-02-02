@@ -4,15 +4,21 @@ const CheckoutPage = ({
   cart,
   quantity,
   games,
-  e,
   totalPrice,
-  hasOrdered,
   setHasOrdered,
+  hasOrdered,
+  setCart,
 }) => {
   return (
     <div className="checkout-page page-sizing">
       <div>
-        <CheckoutCart cart={cart} quantity={quantity} />
+        <CheckoutCart
+          cart={cart}
+          setCart={setCart}
+          quantity={quantity}
+          hasOrdered={hasOrdered}
+          setHasOrdered={setHasOrdered}
+        />
       </div>
       <div>
         <p className="price-added">Total Price: {totalPrice.toFixed(2)}</p>
@@ -29,11 +35,3 @@ const CheckoutPage = ({
 };
 
 export default CheckoutPage;
-
-// <div className="message">
-// {cart.length === 5 ? (
-//   <p>You have a full cart</p>
-// ) : (
-//   <p>{cart.length} GAMES ADDED | You still have space for more</p>
-// )}
-// </div>

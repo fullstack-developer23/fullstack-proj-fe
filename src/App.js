@@ -60,6 +60,7 @@ function App() {
           path="/checkout"
           element={
             <CheckoutPage
+              setCart={setCart}
               cart={cart}
               quantity={quantity}
               totalPrice={totalPrice}

@@ -2,9 +2,10 @@ import React from "react";
 import "./CheckoutCartCard.css";
 
 const CheckoutCartCard = ({ cart, setCart, game }) => {
-  const handleClick = (e, game) => {
-    setCart([...cart, game]);
-    console.log(cart);
+  const handleClick = (e, cart) => {
+    const temp = cart;
+    const temp2 = cart.filter((el) => parseInt(e.target.value) !== el.gameId);
+    setCart([...temp2]);
   };
   return (
     <div className="CheckoutCartCard">
@@ -18,9 +19,10 @@ const CheckoutCartCard = ({ cart, setCart, game }) => {
 
       <div>
         <button
-          onClick={(e) => handleClick(e, game)}
+          onClick={(e) => handleClick(e, cart)}
           className="remove-btn"
           type="button"
+          value={game.gameId}
         >
           Remove
         </button>

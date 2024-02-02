@@ -34,7 +34,6 @@ export const loginFetch = async (username, password) => {
   );
 
   const data = await response.json();
-  console.log(data);
 
   return data;
 };
@@ -54,7 +53,6 @@ export const deleteUserFetch = async (username) => {
   );
 
   const data = await response.json();
-  console.log(data);
 
   return data;
 };
@@ -75,7 +73,6 @@ export const updateEmailFetch = async (username, email) => {
   );
 
   const data = await response.json();
-  console.log(data);
 
   return data;
 };
@@ -92,7 +89,6 @@ export const addOrder = async (totalPrice, UserId) => {
     }),
   });
   const data = await response.json();
-  console.log(data);
 
   return data;
 };

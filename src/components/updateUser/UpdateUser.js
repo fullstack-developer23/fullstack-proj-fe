@@ -10,7 +10,6 @@ const UpdateUser = ({ setLoggedIn, loggedIn }) => {
 
     try {
       const result = await updateEmailFetch(loggedIn.username, newEmail);
-      console.log(result);
 
       if (result) {
         setLoggedIn({ ...loggedIn, email: result.user.email });
